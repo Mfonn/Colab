@@ -1,27 +1,29 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import FAQ from "./FAQ";
 import Analytics from "./Analytics";
-import Profile from "./Profile"
+import Profile from "./Profile";
+import TimeChart from "./TimeChart";
 
 export default function Dashboard() {
   return (
     <div>
       <Section>
         <Navbar />
-        <div className='grid'>
-          <div className='row__one'>
+        <div className="grid">
+          <div className="row__one">
+            <TimeChart />
             <Analytics />
             <FAQ />
           </div>
-          <div className='row__two'>
+          <div className="row__two">
             <Profile />
           </div>
         </div>
       </Section>
     </div>
-  )
+  );
 }
 
 const Section = styled.section`
