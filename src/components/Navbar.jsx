@@ -6,8 +6,7 @@ export default function Navbar() {
     <Nav>
       
         <div className='title'>
-          <h4>Hi Allegra,</h4>
-          <h1>Welcome to <span>YOUR DASH</span></h1>
+          <h1>Welcome to <span>PRODUCT NAME</span></h1>
         </div>
      
     </Nav>

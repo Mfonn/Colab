@@ -13,7 +13,7 @@ export default function Dashboard() {
         <div className='grid'>
           <div className='row__one'>
             <Analytics />
-            <FAQ />
+            {/* <FAQ /> */}
           </div>
           <div className='row__two'>
             <Profile />
@@ -33,20 +33,25 @@ const Section = styled.section`
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-left: 8%;
+    padding-right: 21%;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     .row__one {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       height: 50%;
       gap: 1rem;
     }
 
     .row__two {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       height: 50%;
+      width: 80%;
+      margin: auto;
+      margin-top: 1rem;
       gap: 1rem;
     }
   }

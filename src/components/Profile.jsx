@@ -1,36 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
-import image from "../assets/profile.jpg";
-import { BiTimer } from "react-icons/bi";
+// import image from "../assets/profile.jpg";
+// import { BiTimer } from "react-icons/bi";
 import { cardStyles } from "./ReusuableStyles";
+import Countdown from './Countdown';
 
 export default function Profile() {
+  
+  
   return (
     <Section>
-      <div className='image'>
-        <img src={image} alt="" />
-      </div>
-
-      <div className='title'>
-        <h2>Allegra Surname</h2>
-      </div>
 
       <div className='info'>
         <div className='container'>
-          <h5><BiTimer /> Time Online</h5>
-          <h3>28</h3>
+          <h3>Push Notification Settings</h3>
+          <h5 className='instruction'>Provide times you would like to be notified for screen breaks</h5>
+          
+          <Countdown />
         </div>
       </div>
+
+
+{/* 
+      <div className='image'>
+        <img src={image} alt="" />
+      </div> */}
+
+
     </Section>
   )
 }
+
 
 
 const Section = styled.section`
   ${cardStyles};
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem; 
   .image {
     max-height: 10rem;
@@ -66,7 +72,12 @@ const Section = styled.section`
     display: flex;
     gap: 1rem;
     .container {
-      text-align: center;
+      padding: 1rem 3rem 3rem 2rem;
+
+      .instruction {
+        margin-top: 1%;
+      }
+
     }
   }
 `;

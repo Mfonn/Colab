@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
 import { MdSpaceDashboard } from "react-icons/md";
-import { RiDashboard2Fill, RiEyeCloseFill } from "react-icons/ri";
-import { FaAddressCard } from "react-icons/fa";
-import { GiTwirlCenter } from "react-icons/gi";
-import { BsFillChatTextFill } from "react-icons/bs";
-import { IoSettings } from "react-icons/io5";
-import { FiLogOut } from "react-icons/fi";
-import { GiHamburger } from "react-icons/gi";
-import { VscChromeClose } from "react-icons/vsc";
+import { RiEyeCloseFill } from "react-icons/ri";
+import { FiLogOut, FiSettings } from "react-icons/fi";
+
 
 export default function Sidebar() {
 
+  let navigate = useNavigate();
+
   const [currentLink, setCurrentLink] = useState(1)
+  const [navbarState, setNavbarState] = useState(false);
+  const html = document.querySelector("html");
+  html.addEventListener("click", () => setNavbarState(false));
 
   return (
     <div>
@@ -28,28 +29,36 @@ export default function Sidebar() {
             <ul>
               <li onClick={() => setCurrentLink(1)}
               className={currentLink ===1 ? "active" : ""}>
-                <a href="#">
+                <a href="#" onClick={() => {
+                  navigate("/");
+                }}>
                   <MdSpaceDashboard />
-                  <span> Dashboard</span>
+                  <span>
+                    Dashboard
+                    </span>
                 </a>
                 </li>
 
               <li onClick={() => setCurrentLink(2)}
               className={currentLink ===2 ? "active" : ""}>
-                <a href="#">
-                  <RiDashboard2Fill />
-                  <span>Notifications</span>
+                <a href="#" onClick={() => {
+                  navigate("Settings");
+                }}>
+                  <FiSettings />
+                  <span>
+                    Settings
+                  </span>
                 </a>
                 </li>
 
-
+{/* 
               <li onClick={() => setCurrentLink(3)}
               className={currentLink ===3 ? "active" : ""}>
                 <a href="#">
                   <BsFillChatTextFill />
                   <span>FAQs</span>
                 </a>
-                </li>
+                </li> */}
 
 
             </ul>
@@ -63,6 +72,51 @@ export default function Sidebar() {
           </a>
         </div>
       </Section>
+
+      <ResponsiveNav 
+        state={navbarState}
+        className={navbarState ? "show" : ""}
+        >
+
+        <div className='responsive__links'>
+            <ul>
+              <li onClick={() => setCurrentLink(1)}
+              className={currentLink ===1 ? "active" : ""}>
+                <a href="#" onClick={() => {
+                  navigate("/");
+                }}>
+                  <MdSpaceDashboard />
+                  <span>
+                    Dashboard
+                    </span>
+                </a>
+                </li>
+
+              <li onClick={() => setCurrentLink(2)}
+              className={currentLink ===2 ? "active" : ""}>
+                <a href="#" onClick={() => {
+                  navigate("Settings");
+                }}>
+                  <FiSettings />
+                  <span>
+                    Settings
+                  </span>
+                </a>
+                </li>
+
+{/* 
+              <li onClick={() => setCurrentLink(3)}
+              className={currentLink ===3 ? "active" : ""}>
+                <a href="#">
+                  <BsFillChatTextFill />
+                  <span>FAQs</span>
+                </a>
+                </li> */}
+
+
+            </ul>
+        </div>
+      </ResponsiveNav>
     </div>
   )
 }
@@ -150,4 +204,44 @@ const Section = styled.section`
       color: white;
     }
   }
+
+  @media screen add (min-width: 200px) and (max-width: 1000px) {
+    position: initial;
+    width: 100%;
+    height: max-content;
+    padding: 1rem;
+    .top {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      .toggle {
+        display: block;
+        color: #ffffff;
+        z-index: 10;
+        svg {
+          font-size: 1.4rem;
+        }
+      }
+      .brand {
+        gap: 1rem;
+        justify-content: flex-start;
+      }
+    }
+    .top >.links, 
+    .logout {
+      display: none;
+    }
+  }
+  `;
+
+
+  const ResponsiveNav = styled.nav`
+    position: fixed;
+    right: -10vw;
+    top: 0;
+    z-index: 20;
+    background-color: #000000;
+    heighht: 100vh;
+    
   `;

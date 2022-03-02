@@ -5,6 +5,7 @@ import { BsFillCalendar2WeekFill } from 'react-icons/bs';
 import { IoStatsChart } from 'react-icons/io5';
 import { BiGroup } from "react-icons/bi";
 import { FiActivity } from "react-icons/fi";
+import Clicks from './Clicks';
 
 export default function Analytics() {
   return (
@@ -26,8 +27,7 @@ export default function Analytics() {
           <IoStatsChart />
         </div>
         <div className='content'>
-            <h5>Minutes</h5>
-            <h2>1450</h2>
+           <Clicks />
         </div>
       </div>
     </Section>
@@ -37,11 +37,11 @@ export default function Analytics() {
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 4rem;
 
   .analytic {
     ${cardStyles};
-    padding: 1rem;
+    padding: 2.5rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
