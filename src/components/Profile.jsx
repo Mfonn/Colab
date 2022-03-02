@@ -72,7 +72,7 @@ const Section = styled.section`
     display: flex;
     gap: 1rem;
     .container {
-      padding: 1rem 3rem 3rem 2rem;
+      padding: 1rem 2rem 2rem 2rem;
 
       .instruction {
         margin-top: 1%;

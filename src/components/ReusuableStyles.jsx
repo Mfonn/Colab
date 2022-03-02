@@ -1,7 +1,7 @@
 import {css} from "styled-components";
 
 export const cardStyles = css`
-    padding: 1rem 2rem 3rem 2rem;
+    padding: 0.5rem 1rem 1rem 0.5rem;
     border-radius: 1rem;
     background-color: #212121;
     color: #ffffff;

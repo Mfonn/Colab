@@ -6,19 +6,14 @@ import { IoStatsChart } from 'react-icons/io5';
 import { BiGroup } from "react-icons/bi";
 import { FiActivity } from "react-icons/fi";
 import Clicks from './Clicks';
+import TimeChart from "./TimeChart";
 
 export default function Analytics() {
   return (
     <Section>
       <div className='analytic'>
-        <div className='logo'>
-          <BsFillCalendar2WeekFill />
-        </div>
 
-        <div className='content'>
-          <h5>Hours this month</h5>
-          <h2> 52 Hrs </h2>
-        </div>
+            <TimeChart />
 
       </div>
 
@@ -41,7 +36,7 @@ const Section = styled.section`
 
   .analytic {
     ${cardStyles};
-    padding: 2.5rem;
+    padding: 0.1rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
