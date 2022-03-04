@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import { cardStyles} from "./ReusuableStyles";
-import { BsFillCalendar2WeekFill } from 'react-icons/bs';
-import { IoStatsChart } from 'react-icons/io5';
-import { BiGroup } from "react-icons/bi";
-import { FiActivity } from "react-icons/fi";
 import Clicks from './Clicks';
+import Many from './Many';
 import TimeChart from "./TimeChart";
 
 export default function Analytics() {
@@ -19,7 +16,7 @@ export default function Analytics() {
 
       <div className='analytic'>
         <div className='logo'>
-          <IoStatsChart />
+          <Many />
         </div>
         <div className='content'>
            <Clicks />
@@ -44,7 +41,7 @@ const Section = styled.section`
     transition: 0.5s ease-in-out;
     &:hover {
       background-color: #ffc107;
-      color: #000000;
+      color: blue;
       svg {
         color: #ffffff;
       }

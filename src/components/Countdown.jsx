@@ -29,10 +29,27 @@ function MyTimer({ expiryTimestamp }) {
             <Notification />
           </div>);
 
-      
+    }
+  }
+
+    function purr (number) {
+        const time = new Date();
+
+        time.setSeconds(time.getSeconds() + number);
+        restart(time)
 
     }
-     }
+
+    function kulp(numb, number){
+      
+          setInterval(
+          () => purr(number),
+          numb
+          );
+        
+        }
+      
+
 
   return (
     <Section>
@@ -46,35 +63,21 @@ function MyTimer({ expiryTimestamp }) {
       <button onClick={resume}>Resume</button>
       </div>
     
+      
+      <button value="20" className = "jiggle" onClick={ () =>  {purr(10); kulp(1100* 10, 10);}}
 
-      <button className = "jiggle" onClick={() => {
-        
-        const time = new Date();
-        time.setSeconds(time.getSeconds() + 10);
-        restart(time)
+      >20</button>
 
-        
-      }}>20</button>
+       <button className="jiggle" onClick={() => {purr(1500); kulp(1600*1000, 1500);
 
-       <button className="jiggle" onClick={() => {
-        
-        const time = new Date();
-        time.setSeconds(time.getSeconds() + 1500);
-        restart(time)
       }}>25</button>
 
-        <button className="jiggle" onClick={() => {
+        <button className="jiggle" onClick={() => {purr(1800); kulp(1900*1000, 1800);
         
-        const time = new Date();
-        time.setSeconds(time.getSeconds() + 1800);
-        restart(time)
       }}>30</button>
 
-        <button className="jiggle" onClick={() => {
+        <button className="jiggle" onClick={() => {purr(2700); kulp(2800*1000, 2700);
 
-        const time = new Date();
-        time.setSeconds(time.getSeconds() + 2700);
-        restart(time)
       }}>45</button>
 
       
@@ -91,16 +94,7 @@ function MyTimer({ expiryTimestamp }) {
   );
 }
 
-export default function App() {
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 50); // timer it begins with
-  return (
-    <div>
-      <MyTimer expiryTimestamp={time} />
-    
-    </div>
-  );
-}
+export default MyTimer
 
 
 
