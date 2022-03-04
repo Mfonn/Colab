@@ -5,15 +5,15 @@ export default class TimeChart extends Component {
   constructor(props) {
     super(props);
 
-    // this.updateCharts = this.updateCharts.bind(this);
+    this.updateSeries = this.updateSeries.bind(this);
     this.state = {
       series: [0],
       options: {
         chart: {
-          height: 400,
+          height: 500,
           type: "radialBar",
           toolbar: {
-            show: true,
+            show: false,
           },
         },
         plotOptions: {
@@ -22,7 +22,7 @@ export default class TimeChart extends Component {
             // endAngle: 225,
             hollow: {
               margin: 0,
-              size: "50%",
+              size: "60%",
               background: "#fff",
               image: undefined,
               imageOffsetX: 0,
@@ -38,8 +38,8 @@ export default class TimeChart extends Component {
             },
             track: {
               background: "#fff",
-              strokeWidth: "80%",
-              margin: 0, // margin is in pixels
+              strokeWidth: "70%",
+              margin: 0,
               dropShadow: {
                 enabled: true,
                 top: -3,
@@ -62,7 +62,7 @@ export default class TimeChart extends Component {
                   return Math.trunc((val / 100) * 24);
                 },
                 color: "#111",
-                fontSize: "36px",
+                fontSize: "30px",
                 show: true,
               },
             },
@@ -84,7 +84,7 @@ export default class TimeChart extends Component {
         stroke: {
           lineCap: "round",
         },
-        labels: [""],
+        labels: ["Hours Spent"],
       },
     };
   }
@@ -92,13 +92,15 @@ export default class TimeChart extends Component {
     this.updateSeries();
   }
   updateSeries() {
-    // const series = [4.17, 8.34, 12.51, 16.68, 20.85];
+    // Create an array
     const rate = 4.17;
     const newSetOfRate = [];
-    for (let i = 1; i <= 24; i++) {
+    for (let i = 0; i <= 24; i++) {
       newSetOfRate.push(rate * i);
     }
     console.log(newSetOfRate);
+
+    //Loop through the array at intervals
     let hoursOnChart = 1000 * 60 * 60;
     for (let i = 0; i < newSetOfRate.length; i++) {
       setTimeout(() => {
@@ -108,7 +110,6 @@ export default class TimeChart extends Component {
     }
   }
   render() {
-    // this.updateSeries();
     return (
       <div>
         <Chart
@@ -116,6 +117,7 @@ export default class TimeChart extends Component {
           series={this.state.series}
           type="radialBar"
         />
+        {/* <button onClick={this.updateSeries}>Update!</button> */}
       </div>
     );
   }

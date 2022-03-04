@@ -1,43 +1,36 @@
-import React, { useState } from 'react';
+import React from "react";
 import styled from "styled-components";
 // import image from "../assets/profile.jpg";
 // import { BiTimer } from "react-icons/bi";
 import { cardStyles } from "./ReusuableStyles";
-import Countdown from './Countdown';
+import Countdown from "./Countdown";
 
 export default function Profile() {
-  
-  
   return (
     <Section>
-
-      <div className='info'>
-        <div className='container'>
+      <div className="info">
+        <div className="container">
           <h3>Push Notification Settings</h3>
-          <h5 className='instruction'>Provide times you would like to be notified for screen breaks</h5>
-          
+          <h5 className="instruction">
+            Provide times you would like to be notified for screen breaks
+          </h5>
           <Countdown />
         </div>
       </div>
 
-
-{/* 
+      {/* 
       <div className='image'>
         <img src={image} alt="" />
       </div> */}
-
-
     </Section>
-  )
+  );
 }
-
-
 
 const Section = styled.section`
   ${cardStyles};
   display: flex;
   flex-direction: column;
-  gap: 1rem; 
+  gap: 1rem;
   .image {
     max-height: 10rem;
     overflow: hidden;
@@ -57,7 +50,7 @@ const Section = styled.section`
   }
   .title {
     text-align: center;
-    h2, 
+    h2,
     h5 {
       color: #ffc107;
       font-family: "Permanent Marker", cursive;
@@ -77,7 +70,6 @@ const Section = styled.section`
       .instruction {
         margin-top: 1%;
       }
-
     }
   }
 `;
