@@ -5,7 +5,7 @@ function Clicks() {
         <div className="main-cointainer">
             
               
-<p>Eye Exercises </p>
+<p>Breaks Taken </p>
   
         </div>
     )

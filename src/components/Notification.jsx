@@ -1,8 +1,6 @@
 import React from 'react';
-import { FaTimes } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 const Msg = () => (
   <div>
@@ -20,6 +18,12 @@ function Notification() {
     const closeButton = ({ closeToast }) => {
       <button onClick={closeToast}></button>
     }
+
+
+   
+ 
+
+
 
   return (
     <div>

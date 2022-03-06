@@ -6,7 +6,7 @@ export default function Navbar() {
     <Nav>
       
         <div className='title'>
-          <h1>Welcome to <span>PRODUCT NAME</span></h1>
+          <h1>EyeCare</h1>
         </div>
      
     </Nav>
@@ -15,6 +15,8 @@ export default function Navbar() {
 
 const Nav = styled.nav`
   display: flex;
+  margin-top: 3%;
+  margin-left: 8%;
   justify-content: space-between;
   color: #ffffff;
   .title {

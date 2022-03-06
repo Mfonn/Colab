@@ -1,24 +1,31 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import styled from "styled-components";
-import Dashboard from "./components/Dashboard";
-// import Sidebar from "./components/Sidebar";
-import Settings from "./components/Settings";
+import Dashboard from "./components/Dashboard"
+// import Settings from "./components/Settings";
+import Analytics from './components/Analytics';
+import Navbar from "./components/Navbar";
 
 
 
 
 export default function() {
   return (
-    <Router>
-      {/* <Sidebar /> */}
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </Router>
+    <div>
+      <Navbar />
+      <Section>
+      <Analytics />
+      <Dashboard />
+      </Section>
+    </div>
+
   );
 }
 
 
-const Div = styled.div``;
+const Section = styled.section`
+     padding: 0.1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+`;
