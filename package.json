@@ -25,6 +25,7 @@
     "react-timer-hook": "^3.0.5",
     "react-toastify": "^8.2.0",
     "react-transition-group": "^4.4.2",
+    "react-wavify": "^1.5.7",
     "styled-components": "^5.3.3",
     "sweetalert2": "^11.4.4",
     "web-vitals": "^2.1.4"
