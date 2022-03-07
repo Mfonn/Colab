@@ -2,20 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Profile from "./Profile";
 
-
 export default function Dashboard() {
   return (
     <div>
       <Section>
-        
         <div className="grid">
-          <div className="row__one">
-            {/* <FAQ /> */}
-    
-
-          </div>
+          <div className="row__one">{/* <FAQ /> */}</div>
           <div className="row__two">
-            
             <Profile />
           </div>
         </div>

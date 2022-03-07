@@ -9,20 +9,11 @@ export default class TimeChart extends Component {
     this.state = {
       series: [0],
       options: {
-        chart: {
-          height: 500,
-          type: "radialBar",
-          toolbar: {
-            show: false,
-          },
-        },
         plotOptions: {
           radialBar: {
-            // startAngle: -135,
-            // endAngle: 225,
             hollow: {
               margin: 0,
-              size: "60%",
+              size: "50%",
               background: "#fff",
               image: undefined,
               imageOffsetX: 0,
@@ -38,7 +29,7 @@ export default class TimeChart extends Component {
             },
             track: {
               background: "#fff",
-              strokeWidth: "70%",
+              strokeWidth: "50%",
               margin: 0,
               dropShadow: {
                 enabled: true,
@@ -53,7 +44,7 @@ export default class TimeChart extends Component {
               show: true,
               name: {
                 offsetY: -10,
-                show: true,
+                show: false,
                 color: "#575555",
                 fontSize: "17px",
               },
@@ -61,25 +52,37 @@ export default class TimeChart extends Component {
                 formatter: function (val) {
                   return Math.trunc((val / 100) * 24);
                 },
-                color: "#111",
-                fontSize: "30px",
+                color: "#343f56",
+                fontSize: "3rem",
                 show: true,
               },
             },
           },
         },
+        title: {
+          text: "Hours spent online",
+          align: "center",
+          margin: 10,
+          offsetY: 30,
+          style: {
+            fontSize: "1.2rem",
+            color: "#343f56",
+            fontWeight: 700,
+          },
+        },
         fill: {
           type: "gradient",
-          gradient: {
-            shade: "dark",
-            type: "horizontal",
-            shadeIntensity: 0.5,
-            gradientToColors: ["#c6a1e5"],
-            inverseColors: true,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 100],
-          },
+          colors: ["#343f56"],
+          // gradient: {
+          //   shade: "dark",
+          //   type: "horizontal",
+          //   shadeIntensity: 0.5,
+          //   // gradientToColors: ["rgba(255, 197, 6, 0.904)"],
+          //   inverseColors: true,
+          //   opacityFrom: 1,
+          //   opacityTo: 1,
+          //   stops: [0, 100],
+          // },
         },
         stroke: {
           lineCap: "round",
@@ -116,6 +119,8 @@ export default class TimeChart extends Component {
           options={this.state.options}
           series={this.state.series}
           type="radialBar"
+          height="300px"
+          width="100%"
         />
         {/* <button onClick={this.updateSeries}>Update!</button> */}
       </div>

@@ -1,36 +1,32 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { cardStyles} from "./ReusuableStyles";
-import Clicks from './Clicks';
+import { cardStyles } from "./ReusuableStyles";
+import Clicks from "./Clicks";
 import TimeChart from "./TimeChart";
 
 export default function Analytics() {
   return (
     <Section>
-      <div className='analytic'>
-        <div className='logo'>
+      <div className="analytic">
+        <div className="logo">
           <h1>0</h1>
         </div>
-        <div className='content'>
-           <Clicks />
+        <div className="content">
+          <Clicks />
         </div>
-     
-            
-
       </div>
 
-      <div className='analytic analytic2'>
+      <div className="analytic analytic2">
         <TimeChart />
-       </div>
+      </div>
     </Section>
-  )
+  );
 }
 
 const Section = styled.section`
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin-top: 5%;
-
   .analytic2 {
     margin-top: 30%;
   }
