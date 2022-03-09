@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Mfonn/Colab/static/css/main.202caa9d.css",
-    "main.js": "/Mfonn/Colab/static/js/main.16018bd5.js",
-    "index.html": "/Mfonn/Colab/index.html",
-    "main.202caa9d.css.map": "/Mfonn/Colab/static/css/main.202caa9d.css.map",
-    "main.16018bd5.js.map": "/Mfonn/Colab/static/js/main.16018bd5.js.map"
+    "main.css": "/Colab/static/css/main.202caa9d.css",
+    "main.js": "/Colab/static/js/main.4bd5a68f.js",
+    "index.html": "/Colab/index.html",
+    "main.202caa9d.css.map": "/Colab/static/css/main.202caa9d.css.map",
+    "main.4bd5a68f.js.map": "/Colab/static/js/main.4bd5a68f.js.map"
   },
   "entrypoints": [
     "static/css/main.202caa9d.css",
-    "static/js/main.16018bd5.js"
+    "static/js/main.4bd5a68f.js"
   ]
 }
