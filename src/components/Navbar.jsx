@@ -15,15 +15,15 @@ export default function Navbar() {
 
 const Nav = styled.nav`
   display: flex;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 8%;
   justify-content: space-between;
-  color: #ffffff;
+  color: #343F56;
   .title {
     h1 {
       span {
         margin-left: 0.5rem;
-        color: #ffc107;
+        color: #343F56;
         letter-spacing: 0.2rem;
         font-family: "Permanent Marker", cursive;
       }

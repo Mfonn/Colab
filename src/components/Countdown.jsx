@@ -38,12 +38,12 @@ function MyTimer({ expiryTimestamp }) {
     <Section>
       <div>
         <div style={{ fontSize: "100px", textAlign: "center" }}>
-          <span>{minutes}</span>:<span>{seconds}</span>
+          {/* <span>{minutes}</span>:<span>{seconds}</span> */}
         </div>
-        <p>{isRunning ? "Running" : "Not running"}</p>
-        <button onClick={start}>Start</button>
+        {/* <p>{isRunning ? "Running" : "Not running"}</p> */}
+        {/* <button onClick={start}>Start</button>
         <button onClick={pause}>Pause</button>
-        <button onClick={resume}>Resume</button>
+        <button onClick={resume}>Resume</button> */}
       </div>
 
       <button
@@ -95,6 +95,33 @@ function MyTimer({ expiryTimestamp }) {
 export default MyTimer;
 
 const Section = styled.section`
+
+  background-color: #ffffff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+
+  border-radius: 7%;
+  height: auto;
+  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.3);
+
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+
+  padding: 1.5rem;
+
+  .jiggle {
+      background-color: #f3d189;
+      color: #343f56;
+      margin: 2%;
+      box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3);
+  }
+
+  button:focus {
+    background-color: #fb9300;
+  }
+
   button {
     padding: 15px;
     background-color: #facf7e;
@@ -106,14 +133,61 @@ const Section = styled.section`
     font-weight: bold;
     transition: all 1s;
     cursor: pointer;
-    .jiggle {
-      background-color: blue;
-      color: pink;
-    }
+
     &:hover {
-      background-color: #fab534;
+      background-color: #fb9300;
       transform: scaleX(1.1);
       overflow-y: hidden;
     }
   }
+
+
+   
+    .column {
+      float: left;
+    }
+
+    .left {
+      width: 75%;
+    }
+
+    .right {
+      width: 25%;
+    }
+ 
+
+  .Toastify__close-button--light {
+    display: none;
+  }
+
+    --toastify-color-progress-light: linear-gradient(
+    to right,
+     #ffbc5a, #f3d189, #ffe7c4
+  );
+
+  .noti{
+    background-color: #ffffff;
+    border-radius: 0%;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 0.5rem;
+    margin: 0;
+
+    border: 0;
+  }
+
+  .vl {
+  
+    border-left: 1px solid #e6e6e6; 
+    height: 3rem;
+    // width: 1%;
+    // display: inline-block;
+    // padding: 0;
+    // margin: 0;
+
+
+  }
 `;
+

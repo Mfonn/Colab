@@ -31,6 +31,14 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  margin-bottom: 2%;
+  box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3);
+
+  transition: 0.5s ease-in-out;
+
+
+
   .image {
     max-height: 10rem;
     overflow: hidden;
@@ -66,6 +74,15 @@ const Section = styled.section`
     gap: 1rem;
     .container {
       padding: 1rem 2rem 2rem 2rem;
+
+      h3 {
+        padding-bottom: 1rem;
+      }
+
+      h5 {
+        font-weight: 300;
+        padding-bottom: 1rem;
+      }
 
       .instruction {
         margin-top: 1%;

@@ -20,16 +20,17 @@ export default function Dashboard() {
 const Section = styled.section`
   margin-left: 1vw;
   padding: 1rem;
-  height: 100%;
+  height: auto;
+  width: 100%;
 
   .grid {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding-left: 4%;
-    padding-right: 15%;
+    height: auto;
+    padding-left: 0%;
+    padding-right: 0%;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
 
     .row__one {
       display: grid;
@@ -41,8 +42,8 @@ const Section = styled.section`
     .row__two {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      height: 50%;
-      width: 80%;
+      height: auto;
+      width: 100%;
       margin: auto;
       margin-top: 1rem;
       gap: 1rem;
