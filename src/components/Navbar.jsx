@@ -6,7 +6,7 @@ export default function Navbar() {
     <Nav>
       
         <div className='title'>
-          <h1>EyeCare</h1>
+          <h1 className='font-link'>EyeCare</h1>
         </div>
      
     </Nav>
@@ -14,18 +14,30 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
+
+.font-link {
+  font-family: 'Dongle', sans-serif;
+  font-size: 2.5rem;
+  padding-right: 4rem;
+  font-weight: light;
+
+}
+
   display: flex;
   margin-top: 1%;
   margin-left: 8%;
   justify-content: space-between;
   color: #343F56;
+  
+  width: 100%;
   .title {
     h1 {
       span {
         margin-left: 0.5rem;
+        
         color: #343F56;
         letter-spacing: 0.2rem;
-        font-family: "Permanent Marker", cursive;
+        font-family: 'Dongle', sans-serif;
       }
     }
   }

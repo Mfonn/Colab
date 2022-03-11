@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { cardStyles } from "./ReusuableStyles";
 import Countdown from "./Countdown";
 
-export default function Profile() {
+export default function Profile({setCount, count}) {
   return (
     <Section>
       <div className="info">
@@ -14,7 +14,7 @@ export default function Profile() {
           <h5 className="instruction">
             Provide times you would like to be notified for screen breaks
           </h5>
-          <Countdown />
+          <Countdown setCount={setCount} count={count}/>
         </div>
       </div>
 

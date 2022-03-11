@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
   
-function Clicks() {
+function Clicks({count}) {
     return (
         <Section>
         <div className="main-cointainer">
             
               
-        <h1>0 </h1>
+        <h1>{count}</h1>
   
         </div>
         </Section>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from "styled-components";
@@ -11,26 +11,32 @@ const Msg = () => (
 
 
 
-function Notification() {
+function Notification({setCount, count}) {
 
-    const displayMsg = () => {
+  console.log(count)
 
-
-    toast(<Msg />) 
-  }
+    
+  
 
     const closeButton = ({ closeToast }) => {
       <button onClick={closeToast}></button>
     }
 
-    const ColoredLine = ({ color }) => (
+    const ColoredLine = ({ color, padding, marginTop, marginBottom }) => (
   <hr
     style={{
       color,
-      height: 1
+      height: 1,
+      marginTop, 
+      marginBottom
     }}
   />
 );
+
+    function displayMsg() {
+      toast(<Msg />);
+      setCount(count+1);
+    }
 
 
    
@@ -40,19 +46,29 @@ function Notification() {
 
   return (
     <Section>
-      <div clasName="row">
+      <div className="row">
         <div  className="column left">
-        <h4>It is time to rest you eyes</h4>
+          <div className="row">
+            <div className="column right">
+              <h2 className="circle">circle</h2>
+            </div>
+
+            <div className="column left">
+              <h4>It is time to rest you eyes</h4>
+            </div>
+            
+            
+          </div>
+        
+     
         </div>
-          
-    
       <div className="column right">
-        <div className='vl'>
+        
 
       <button className="noti" onClick={displayMsg}>Accept</button>
-      <ColoredLine color="#e6e6e6" />
-     <button className="noti" onClick={closeButton}>Close</button>
-     </div>
+      <ColoredLine color="#e6e6e6" marginTop="0.5rem" marginBottom="0.5rem" />
+     <button className="noti" onClick={closeButton}>Ignore</button>
+  
       </div>
 
      </div>
@@ -77,6 +93,8 @@ const Section = styled.section`
 
     .left {
       width: 75%;
+      border-right: 1px solid #e6e6e6;
+      height: 100%;
     }
 
     .right {
@@ -88,14 +106,27 @@ const Section = styled.section`
     display: none;
   }
 
+  .Toastify__toast-container--top-right {
+    top: 1em;
+    right: 1em;
+    border-radius: 10%;
+
+    padding: 0;
+}
+
+.Toastify__toast-body {
+  padding: 0;
+}
+
   .noti{
     background-color: #ffffff;
     border-radius: 0%;
+    height: auto;
 
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
 
-    padding: 0.5rem;
+    padding: 0.2rem;
     margin: 0;
 
     border: 0;
@@ -105,6 +136,7 @@ const Section = styled.section`
   
     border-left: 1px solid #e6e6e6; 
     height: 3rem;
+    display: inline-block
     // width: 1%;
     // display: inline-block;
     // padding: 0;
@@ -123,4 +155,11 @@ const Section = styled.section`
     to right,
      #ffbc5a, #f3d189, #ffe7c4
   );
+
+  --toastify-toast-width: 400px;
+
+
+  .circle {
+    
+  }
 `;

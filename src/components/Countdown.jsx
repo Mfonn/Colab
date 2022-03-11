@@ -1,28 +1,36 @@
 import React from "react";
 import { useTimer } from "react-timer-hook";
-import { useEffect } from "react";
-import { BsCheckCircleFill } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Notification from "./Notification";
 import styled from "styled-components";
+import Snooze from './Snooze';
 
-function MyTimer({ expiryTimestamp }) {
+
+function MyTimer({ expiryTimestamp, setCount, count }) {
+
+
+  //code for the timer
   const { seconds, minutes, isRunning, start, pause, resume, restart } =
     useTimer({ expiryTimestamp, onExpire: () => bongo() });
 
+    //calls notification everytime the timer runs out
   function bongo() {
     var intID = setTimeout(notify, 1000);
 
+    
+
+    //calls toast notifications when it is done
     function notify() {
       toast(() => (
         <div>
-          <Notification />
+          <Notification setCount={setCount} count={count}/>
         </div>
       ));
     }
   }
 
+  //code to put timer selected
   function purr(number) {
     const time = new Date();
 
@@ -35,18 +43,27 @@ function MyTimer({ expiryTimestamp }) {
   }
 
   return (
+    
     <Section>
-      <div>
+      <div className="">
+        
+        
+      <div className="">
+
+        {/* code for the timer */}
         <div style={{ fontSize: "100px", textAlign: "center" }}>
           {/* <span>{minutes}</span>:<span>{seconds}</span> */}
         </div>
-        {/* <p>{isRunning ? "Running" : "Not running"}</p> */}
-        {/* <button onClick={start}>Start</button>
-        <button onClick={pause}>Pause</button>
-        <button onClick={resume}>Resume</button> */}
+        {/* <p>{isRunning ? "Running" : "Not running"}</p>
+        <button onClick={start}>Start</button> */}
+        {/* <button onClick={pause}>Pause</button> */}
+        {/* <button onClick={resume}>Resume</button> */}
       </div>
 
-      <button
+
+        {/* code for  the  */}
+        <div className="push">
+          <button
         value="20"
         className="jiggle"
         onClick={() => {
@@ -88,6 +105,8 @@ function MyTimer({ expiryTimestamp }) {
       </button>
 
       <ToastContainer limit={1} />
+        </div>
+      </div>
     </Section>
   );
 }
@@ -96,26 +115,29 @@ export default MyTimer;
 
 const Section = styled.section`
 
-  background-color: #ffffff;
-  width: 70%;
-  margin: auto;
-  text-align: center;
 
-  border-radius: 7%;
-  height: auto;
-  box-shadow: 0 10px 10px -10px rgba(0,0,0,0.3);
+  .push {
+     background-color: #ffffff;
+      width: 70%;
+      margin: auto;
+      text-align: center;
 
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
+      border-radius: 7%;
+      height: auto;
+      box-shadow: 0 10px 10px -10px rgba(0,0,0,0.3);
 
-  padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
 
+      padding: 1.5rem;
+
+  }
+ 
   .jiggle {
       background-color: #f3d189;
       color: #343f56;
       margin: 2%;
-      box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3);
   }
 
   button:focus {
@@ -127,10 +149,10 @@ const Section = styled.section`
     background-color: #facf7e;
     color: #343f56;
     border: none;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     font-size: 1.2rem;
-    font-weight: bold;
     transition: all 1s;
     cursor: pointer;
 

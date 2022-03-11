@@ -4,7 +4,10 @@ import { cardStyles } from "./ReusuableStyles";
 import Clicks from "./Clicks";
 import TimeChart from "./TimeChart";
 
-export default function Analytics() {
+export default function Analytics({count}) {
+
+
+
   return (
     <Section>
       <div className="analytic">
@@ -12,7 +15,7 @@ export default function Analytics() {
           <h1 className="taken">Eye Rests Taken</h1>
         </div>
         <div className="content">
-          <Clicks />
+          <Clicks count ={count}/>
         </div>
       </div>
 

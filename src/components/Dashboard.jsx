@@ -1,15 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Profile from "./Profile";
+import Snooze from './Snooze';
 
-export default function Dashboard() {
+export default function Dashboard({setCount, count}) {
   return (
     <div>
       <Section>
         <div className="grid">
-          <div className="row__one">{/* <FAQ /> */}</div>
+          <div className="row__one">
+            <Snooze />
+          </div>
           <div className="row__two">
-            <Profile />
+            <Profile setCount={setCount} count={count}/>
           </div>
         </div>
       </Section>
@@ -35,7 +38,7 @@ const Section = styled.section`
     .row__one {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      height: 50%;
+      height: auto;
       gap: 1rem;
     }
 
