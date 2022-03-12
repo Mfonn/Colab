@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Notification from "./Notification";
 import styled from "styled-components";
-import Snooze from './Snooze';
 
 
 function MyTimer({ expiryTimestamp, setCount, count }) {
@@ -30,7 +29,7 @@ function MyTimer({ expiryTimestamp, setCount, count }) {
     }
   }
 
-  //code to put timer selected
+  //code to put time selected
   function purr(number) {
     const time = new Date();
 
@@ -52,11 +51,11 @@ function MyTimer({ expiryTimestamp, setCount, count }) {
 
         {/* code for the timer */}
         <div style={{ fontSize: "100px", textAlign: "center" }}>
-          {/* <span>{minutes}</span>:<span>{seconds}</span> */}
+        <span>{minutes}</span>:<span>{seconds}</span> 
         </div>
         {/* <p>{isRunning ? "Running" : "Not running"}</p>
         <button onClick={start}>Start</button> */}
-        {/* <button onClick={pause}>Pause</button> */}
+         {/* <button onClick={pause}>Pause</button>  */}
         {/* <button onClick={resume}>Resume</button> */}
       </div>
 

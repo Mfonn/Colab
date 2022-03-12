@@ -5,12 +5,12 @@ import { RiNotificationLine } from 'react-icons/ri';
 
 
 
-  const Snooze = () => {
+  const Snooze = ({pause}) => {
   
  
   return (
       <Section>
-     <div className="snooze">
+     <div className="snooze" onClick={() => {pause()}}>
         {/* <button onClick={pause}>Pause</button> */}
         <RiNotificationOffLine />
         
