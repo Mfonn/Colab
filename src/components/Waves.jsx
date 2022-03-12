@@ -11,9 +11,9 @@ export default function Waves() {
         paused={false}
         options={{
           height: 20,
-          amplitude: 50,
+          amplitude: 70,
           speed: 0.1,
-          points: 4,
+          points: 3,
         }}
       />
     </div>
