@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Montserrat:wght@300;400;500&family=Permanent+Marker&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
+  overflow: hidden;
   height: 100vh;
   width: 100%;
   margin: 0;
-  font-family: "Inter", 'Dongle', sans-serif;
-  background-image: linear-gradient(#fad263 70%, #f7dd97);
+  font-family: "Inter", "Dongle", sans-serif;
+  background-image: linear-gradient(#fad263 70%, #fffb97);
   z-index: -2;
 }
 

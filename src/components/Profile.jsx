@@ -5,16 +5,16 @@ import styled from "styled-components";
 import { cardStyles } from "./ReusuableStyles";
 import Countdown from "./Countdown";
 
-export default function Profile({setCount, count}) {
+export default function Profile({ setCount, count }) {
   return (
     <Section>
       <div className="info">
         <div className="container">
           <h3>Push Notification Settings</h3>
           <h5 className="instruction">
-            Provide times you would like to be notified for screen breaks
+            Provide the frequency of minutes that you would like to be notified
           </h5>
-          <Countdown setCount={setCount} count={count}/>
+          <Countdown className="count" setCount={setCount} count={count} />
         </div>
       </div>
 
@@ -31,13 +31,11 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
+  width: 500px;
   margin-bottom: 2%;
-  box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.3);
 
   transition: 0.5s ease-in-out;
-
-
 
   .image {
     max-height: 10rem;
@@ -68,20 +66,24 @@ const Section = styled.section`
       letter-spacing: 0.2rem;
     }
   }
-
   .info {
     display: flex;
-    gap: 1rem;
+    /* gap: 5rem; */
+    /* height: 300px; */
+    /* width: 400px; */
+
     .container {
-      padding: 1rem 2rem 2rem 2rem;
+      padding: 2rem;
 
       h3 {
         padding-bottom: 1rem;
+        font-size: 1.3rem;
       }
 
       h5 {
-        font-weight: 300;
-        padding-bottom: 1rem;
+        font-weight: normal;
+        font-size: 0.8rem;
+        padding-bottom: 3rem;
       }
 
       .instruction {
