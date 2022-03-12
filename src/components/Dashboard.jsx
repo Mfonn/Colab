@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Profile from "./Profile";
-import Snooze from './Snooze';
+import Snooze from "./Snooze";
 
-export default function Dashboard({setCount, count}) {
+export default function Dashboard({ setCount, count }) {
   return (
     <div>
       <Section>
@@ -12,7 +12,7 @@ export default function Dashboard({setCount, count}) {
             <Snooze />
           </div>
           <div className="row__two">
-            <Profile setCount={setCount} count={count}/>
+            <Profile setCount={setCount} count={count} />
           </div>
         </div>
       </Section>
@@ -25,6 +25,7 @@ const Section = styled.section`
   padding: 1rem;
   height: auto;
   width: 100%;
+  margin-bottom: 70px;
 
   .grid {
     display: flex;

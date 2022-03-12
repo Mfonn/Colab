@@ -1,106 +1,135 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
 
 const Msg = () => (
   <div>
-    Rub your hands and gently place your warm hands over your eyes, with fingertips on the forehead.
+    Rub your hands and gently place your warm hands over your eyes, with
+    fingertips on the forehead.
   </div>
-)
-
-
-
-function Notification({setCount, count}) {
-
-  console.log(count)
-
-    
-  
-
-    const closeButton = ({ closeToast }) => {
-      <button onClick={closeToast}></button>
-    }
-
-    const ColoredLine = ({ color, padding, marginTop, marginBottom }) => (
-  <hr
-    style={{
-      color,
-      height: 1,
-      marginTop, 
-      marginBottom
-    }}
-  />
 );
 
-    function displayMsg() {
-      toast(<Msg />);
-      setCount(count+1);
-    }
+const myDate = new Date();
+const dateTime = myDate.toLocaleTimeString();
 
+function Notification({ setCount, count }) {
+  console.log(count);
 
-   
- 
+  const closeButton = ({ closeToast }) => {
+    <button onClick={closeToast}></button>;
+  };
 
+  const ColoredLine = ({ color, padding, marginTop, marginBottom }) => (
+    <hr
+      style={{
+        color,
+        height: 1,
+        marginTop,
+        marginBottom,
+      }}
+    />
+  );
 
+  function displayMsg() {
+    toast(<Msg />);
+    setCount(count + 1);
+  }
 
   return (
     <Section>
       <div className="row">
-        <div  className="column left">
+        <div className="column">
           <div className="row">
-            <div className="column right">
-              <h2 className="circle">circle</h2>
+            <div className="circle">
+              <div className="right"></div>
             </div>
 
-            <div className="column left">
-              <h4>It is time to rest you eyes</h4>
+            <div className="gap left">
+              <h2>EyeCare</h2>
+              <h4>It’s time to look away from your screen! </h4>
+              <p>{dateTime}</p>
             </div>
-            
-            
           </div>
-        
-     
         </div>
-      <div className="column right">
-        
-
-      <button className="noti" onClick={displayMsg}>Accept</button>
-      <ColoredLine color="#e6e6e6" marginTop="0.5rem" marginBottom="0.5rem" />
-     <button className="noti" onClick={closeButton}>Ignore</button>
-  
+        <div className="btn">
+          <button className="noti btn-down" onClick={displayMsg}>
+            Accept
+          </button>
+          {/* <ColoredLine
+            color="#e6e6e6"
+            marginTop="0.5rem"
+            marginBottom="0.5rem"
+          /> */}
+          <button className="noti btn-up" onClick={closeButton}>
+            Ignore
+          </button>
+        </div>
       </div>
-
-     </div>
-     
     </Section>
-
-  )
+  );
 }
 
-export default Notification
+export default Notification;
 
 const Section = styled.section`
-//   .row:after {
-//   content: "";
-//   display: table;
-//   clear: both;
-// }
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  .row {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 17px;
+  }
 
-    .column {
-      float: left;
-    }
+  .circle {
+    width: fit-content;
+  }
 
-    .left {
-      width: 75%;
-      border-right: 1px solid #e6e6e6;
-      height: 100%;
-    }
+  .left {
+    /* width: 300px; */
+    /* border-right: 1px solid #e6e6e6; */
+    height: 100%;
+    width: fit-content;
+    margin-right: 0px;
+    color: #222;
+    text-align: left;
+    padding: 10px 0px;
+  }
 
-    .right {
-      width: 25%;
-    }
- 
+  h2 {
+    color: #342f56;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  .right {
+    /* width: 25%; */
+    margin: 25px 0px 0px 5px;
+    background-image: linear-gradient(#fad263 70%, #fffb97);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .btn {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+    width: 90px;
+    margin-left: 0px;
+  }
 
   .Toastify__close-button--light {
     display: none;
@@ -110,56 +139,43 @@ const Section = styled.section`
     top: 1em;
     right: 1em;
     border-radius: 10%;
-
-    padding: 0;
-}
-
-.Toastify__toast-body {
-  padding: 0;
-}
-
-  .noti{
-    background-color: #ffffff;
-    border-radius: 0%;
-    height: auto;
-
-    font-size: 0.8rem;
-    font-weight: 600;
-
-    padding: 0.2rem;
-    margin: 0;
-
-    border: 0;
+    padding: 0px;
   }
+
+  .noti {
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+    border-radius: 0px;
+    padding: 0;
+    /* padding-right: 15px; */
+    margin: 0;
+    /* height: fit-content; */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn-down {
+    border-top-right-radius: 5px;
+  }
+
+  .btn-up {
+    border-bottom-right-radius: 5px;
+  }
+
+  /* --toastify-toast-width: 600px; */
 
   .vl {
-  
-    border-left: 1px solid #e6e6e6; 
-    height: 3rem;
-    display: inline-block
-    // width: 1%;
-    // display: inline-block;
-    // padding: 0;
-    // margin: 0;
-
-
+    padding: 0px;
+    margin: 0px;
   }
 
-.Toastify__toast-theme--light, .Toastify__toast, .Toastify__toast--default {
-  height: auto;
-  color: #342f56;
-  padding: 0.5rem;
-}
-
-  --toastify-color-progress-light: linear-gradient(
-    to right,
-     #ffbc5a, #f3d189, #ffe7c4
-  );
-
-  --toastify-toast-width: 400px;
-
-
-  .circle {
-    
+  .Toastify__toast-theme--light,
+  .Toastify__toast,
+  .Toastify__toast--default {
+    height: auto;
+    color: #342f56;
+    padding: 0px;
   }
 `;

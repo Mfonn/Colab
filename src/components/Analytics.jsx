@@ -4,10 +4,7 @@ import { cardStyles } from "./ReusuableStyles";
 import Clicks from "./Clicks";
 import TimeChart from "./TimeChart";
 
-export default function Analytics({count}) {
-
-
-
+export default function Analytics({ count }) {
   return (
     <Section>
       <div className="analytic">
@@ -15,7 +12,7 @@ export default function Analytics({count}) {
           <h1 className="taken">Eye Rests Taken</h1>
         </div>
         <div className="content">
-          <Clicks count ={count}/>
+          <Clicks count={count} />
         </div>
       </div>
 
@@ -37,7 +34,7 @@ const Section = styled.section`
 
   .taken {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     justify-content: center;
   }
 
@@ -61,13 +58,12 @@ const Section = styled.section`
     gap: 1rem;
 
     margin-bottom: 2%;
-    box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.3);
 
     transition: 0.5s ease-in-out;
 
     &:hover {
       background-color: #f9d271;
-      transform: scaleX(1.1);
     }
 
     .content {

@@ -65,7 +65,7 @@ export default class TimeChart extends Component {
           margin: 10,
           offsetY: 30,
           style: {
-            fontSize: "1.2rem",
+            fontSize: "1.3rem",
             color: "#343f56",
             fontWeight: 700,
           },
