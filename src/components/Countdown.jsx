@@ -168,20 +168,58 @@ const Section = styled.section`
       float: left;
     }
 
-    .left {
-      width: 75%;
-    }
 
-    .right {
-      width: 25%;
-    }
+      .row {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 17px;
+  }
+
+ .left {
+    /* width: 300px; */
+    /* border-right: 1px solid #e6e6e6; */
+    height: 100%;
+    width: fit-content;
+    margin-right: 0px;
+    color: #222;
+    text-align: left;
+    padding: 10px 0px;
+  }
+
+  .right {
+    /* width: 25%; */
+    margin: 25px 0px 0px 5px;
+    background-image: linear-gradient(#fad263 70%, #fffb97);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+    .circle {
+    width: fit-content;
+  }
  
 
   .Toastify__close-button--light {
     display: none;
   }
 
-    --toastify-color-progress-light: linear-gradient(
+    .Toastify__toast-container--top-right {
+    top: 1em;
+    right: 1em;
+    border-radius: 10%;
+    padding: 0px;
+    width: 30%;
+  }
+
+  .Toastify__toast-theme--light {
+    padding: 0;
+  }
+
+
+  --toastify-color-progress-light: linear-gradient(
     to right,
      #ffbc5a, #f3d189, #ffe7c4
   );

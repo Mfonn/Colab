@@ -5,8 +5,23 @@ import styled from "styled-components";
 
 const Msg = () => (
   <div>
-    Rub your hands and gently place your warm hands over your eyes, with
+  <div className="row">
+  <div className="column">
+  <div className="row">
+  <div className="circle">
+  <div className="right"></div>
+  </div>
+  <div className="left">
+  
+    <h4 className="warm">
+       Rub your hands and gently place your warm hands over your eyes, with
     fingertips on the forehead.
+    </h4>
+   
+  </div>
+  </div>
+  </div>
+  </div>
   </div>
 );
 
@@ -56,11 +71,9 @@ function Notification({ setCount, count }) {
           <button className="noti btn-down" onClick={displayMsg}>
             Accept
           </button>
-          {/* <ColoredLine
+          <ColoredLine
             color="#e6e6e6"
-            marginTop="0.5rem"
-            marginBottom="0.5rem"
-          /> */}
+          />
           <button className="noti btn-up" onClick={closeButton}>
             Ignore
           </button>
@@ -109,6 +122,7 @@ const Section = styled.section`
   h4 {
     font-size: 0.8rem;
     margin-bottom: 8px;
+    color: #342f56;
   }
 
   p {
@@ -140,6 +154,11 @@ const Section = styled.section`
     right: 1em;
     border-radius: 10%;
     padding: 0px;
+    width: 30%;
+  }
+
+  .Toastify__toast-theme--light {
+    padding: 0;
   }
 
   .noti {
@@ -164,6 +183,14 @@ const Section = styled.section`
     border-bottom-right-radius: 5px;
   }
 
+  .btn-up:hover {
+    background-color: #fad263;
+  }
+
+  .btn-down:hover {
+    background-color: #fad263;
+  }
+
   /* --toastify-toast-width: 600px; */
 
   .vl {
@@ -176,6 +203,20 @@ const Section = styled.section`
   .Toastify__toast--default {
     height: auto;
     color: #342f56;
-    padding: 0px;
+    padding: 0;
+  }
+
+  .Toastify__toast-theme--light {
+    padding: 0;
+  }
+
+  // .Toastify-color-progress-light{
+  // background-color: linear-gradient(#fad263 70%, #fffb97)
+  // }
+
+  .warm {
+    font-weight: light;
+    color: #342f56;
+    font-size: 0.6rem;
   }
 `;
