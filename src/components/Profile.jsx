@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { cardStyles } from "./ReusuableStyles";
 import Countdown from "./Countdown";
 
-export default function Profile({ setCount, count }) {
+export default function Profile({ setCount, count, stop }) {
   return (
     <Section>
       <div className="info">
@@ -14,7 +14,7 @@ export default function Profile({ setCount, count }) {
           <h5 className="instruction">
             Provide the frequency of minutes that you would like to be notified
           </h5>
-          <Countdown className="count" setCount={setCount} count={count} />
+          <Countdown className="count" setCount={setCount} count={count} stop={stop} />
         </div>
       </div>
 

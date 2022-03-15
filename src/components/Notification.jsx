@@ -35,7 +35,7 @@ function Notification({ setCount, count }) {
     <button onClick={closeToast}></button>;
   };
 
-  const ColoredLine = ({ color, padding, marginTop, marginBottom }) => (
+  const ColoredLine = ({ color, marginTop, marginBottom }) => (
     <hr
       style={{
         color,

@@ -3,10 +3,13 @@ import styled from "styled-components";
 import { RiNotificationOffLine } from "react-icons/ri";
 import { RiNotificationLine } from "react-icons/ri";
 
-const Snooze = () => {
+const Snooze = ({setPause}) => {
+
+
   return (
     <Section>
-      <div className="snooze">
+      <div className="snooze" onClick={() => {setPause(true)}}>
+
         {/* <button onClick={pause}>Pause</button> */}
         <RiNotificationOffLine />
       </div>

@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Profile from "./Profile";
 import Snooze from "./Snooze";
 
 export default function Dashboard({ setCount, count }) {
+
+  const [stop, setPause] = useState(false)
+
   return (
     <div>
       <Section>
         <div className="grid">
           <div className="row__one">
-            <Snooze />
+            <Snooze setPause={setPause} />
           </div>
           <div className="row__two">
-            <Profile setCount={setCount} count={count} />
+            <Profile setCount={setCount} count={count} stop={stop} />
           </div>
         </div>
       </Section>

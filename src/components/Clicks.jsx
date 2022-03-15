@@ -5,7 +5,7 @@ function Clicks({ count }) {
   return (
     <Section>
       <div className="main-cointainer">
-        <h1>{count}</h1>
+        <h1 className="tryme">{count}</h1>
       </div>
     </Section>
   );
@@ -14,21 +14,27 @@ function Clicks({ count }) {
 export default Clicks;
 
 const Section = styled.section`
-  width: 65%;
   margin: auto;
   margin-bottom: 5%;
-  display: flex;
+  display: inline;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: #ffffff;
   padding: 0rem;
   color: #343f56;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
 
   h1 {
     font-size: 5rem;
     font-weight: 500;
     padding: 0.5rem;
+    display: inline;
+  }
+
+  .tryme {
+    display: inline;
+  }
+
+  .main-cointainer {
+    display: inline;
   }
 `;

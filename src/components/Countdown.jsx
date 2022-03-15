@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useTimer } from "react-timer-hook";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,12 +6,21 @@ import Notification from "./Notification";
 import styled from "styled-components";
 
 
-function MyTimer({ expiryTimestamp, setCount, count }) {
+function MyTimer({ expiryTimestamp, setCount, count, stop }) {
+
+  console.log(stop)
 
 
   //code for the timer
-  const { seconds, minutes, isRunning, start, pause, resume, restart } =
+  const { seconds, minutes, isRunning, start, resume, pause, restart } =
     useTimer({ expiryTimestamp, onExpire: () => bongo() });
+
+    useEffect(() => {
+      if(stop === true){
+        pause()
+      }
+    })
+   
 
     //calls notification everytime the timer runs out
   function bongo() {
@@ -41,6 +50,8 @@ function MyTimer({ expiryTimestamp, setCount, count }) {
     setInterval(() => purr(number), numb);
   }
 
+  // console.log(pause)
+
   return (
     
     <Section>
@@ -50,9 +61,9 @@ function MyTimer({ expiryTimestamp, setCount, count }) {
       <div className="">
 
         {/* code for the timer */}
-        <div style={{ fontSize: "100px", textAlign: "center" }}>
+        {/* <div style={{ fontSize: "20px", textAlign: "center" }}>
         <span>{minutes}</span>:<span>{seconds}</span> 
-        </div>
+        </div> */}
         {/* <p>{isRunning ? "Running" : "Not running"}</p>
         <button onClick={start}>Start</button> */}
          {/* <button onClick={pause}>Pause</button>  */}

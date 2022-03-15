@@ -9,11 +9,10 @@ export default function Analytics({ count }) {
     <Section>
       <div className="analytic">
         <div className="logo">
-          <h1 className="taken">Eye Rests Taken</h1>
-        </div>
-        <div className="content">
           <Clicks count={count} />
-        </div>
+          <h1 className="taken">Eye Rests Taken</h1>
+
+    </div>
       </div>
 
       <div className="analytic analytic2">
@@ -27,15 +26,18 @@ const Section = styled.section`
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin-top: 0%;
+  display: inline;
 
   h1 {
-    display: flex;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .taken {
     width: 100%;
     font-size: 1.3rem;
     justify-content: center;
+    display: inline;
   }
 
   .analytic2 {
@@ -61,6 +63,7 @@ const Section = styled.section`
     box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.3);
 
     transition: 0.5s ease-in-out;
+    display: inline
 
     &:hover {
       background-color: #f9d271;
@@ -72,7 +75,7 @@ const Section = styled.section`
     }
 
     .logo {
-      display: block;
+      display: inline;
       justify-content: center;
       align-items: center;
       padding: 1.5rem;
