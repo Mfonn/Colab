@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { RiNotificationOffLine } from "react-icons/ri";
-import { RiNotificationLine } from "react-icons/ri";
 
 const Snooze = ({setPause}) => {
 

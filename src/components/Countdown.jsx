@@ -12,7 +12,7 @@ function MyTimer({ expiryTimestamp, setCount, count, stop }) {
 
 
   //code for the timer
-  const { seconds, minutes, isRunning, start, resume, pause, restart } =
+  const { seconds, minutes, pause, restart } =
     useTimer({ expiryTimestamp, onExpire: () => bongo() });
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function MyTimer({ expiryTimestamp, setCount, count, stop }) {
 
     //calls notification everytime the timer runs out
   function bongo() {
-    var intID = setTimeout(notify, 1000);
+    setTimeout(notify, 1000);
 
     
 

@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Waves from "./components/Waves";
 import Loading from './components/Loading';
 
-export default function () {
+export default function App() {
 
   const [count, setCount] = useState(0);
 
