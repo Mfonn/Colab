@@ -6,8 +6,8 @@ function Loading
   return (
     <div>
     <Section>
-       <div class="loadingio-spinner-bean-eater-ri2g1mi889"><div class="ldio-6dzj65qbg0m">
-        <div><div>E</div><div>Y</div><div>E</div></div><div><div></div><div></div><div></div></div>
+       <div className="loadingio-spinner-bean-eater-ri2g1mi889"><div className="ldio-6dzj65qbg0m">
+        <div><div>&hearts;</div><div>&hearts;</div><div>&hearts;</div></div><div><div></div><div></div><div></div></div>
         </div></div>
     </Section>    
     </div>

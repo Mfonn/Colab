@@ -61,9 +61,9 @@ function MyTimer({ expiryTimestamp, setCount, count, stop }) {
       <div className="">
 
         {/* code for the timer */}
-        {/* <div style={{ fontSize: "20px", textAlign: "center" }}>
+       <div style={{ fontSize: "20px", textAlign: "center" }}>
         <span>{minutes}</span>:<span>{seconds}</span> 
-        </div> */}
+        </div> 
         {/* <p>{isRunning ? "Running" : "Not running"}</p>
         <button onClick={start}>Start</button> */}
          {/* <button onClick={pause}>Pause</button>  */}
