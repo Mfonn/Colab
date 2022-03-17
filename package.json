@@ -2,7 +2,7 @@
   "name": "my-pod3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Mfonn.github.io/Colab",
+  "homepage": "./",
   "dependencies": {
     "-": "^0.0.1",
     "@babel/runtime": "^7.17.2",
