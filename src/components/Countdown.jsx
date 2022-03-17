@@ -12,7 +12,7 @@ function MyTimer({ expiryTimestamp, setCount, count, stop }) {
 
 
   //code for the timer
-  const { seconds, minutes, pause, restart } =
+  const { pause, restart } =
     useTimer({ expiryTimestamp, onExpire: () => bongo() });
 
     useEffect(() => {
