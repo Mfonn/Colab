@@ -1,3 +1,12 @@
+-This app was created to aim at users who work from home and on their screens for long periods of time
+- It was gotten from user research that their main problem was eye strain and eye fatigue.
+- The app aims to solve this problem by sending out notifications to carry out eye exercises. 
+- These eye exercises when done are counted in order to give the user a sense of fulfillment and satisfaction. 
+- The app also times the user's time spent online and in this vain helps users stay accountable of their screen time
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
